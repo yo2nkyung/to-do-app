@@ -16,8 +16,16 @@ A full-stack Todo application built with React Native (Expo) for the frontend an
 <img src="todo-frontend/assets/screenshots/start.png" width="200" alt="Start page">
 
 ### Main Todo List & Add New Todo & Edit Todo
+<table>
+<tr>
+<td>
 <img src="todo-frontend/assets/screenshots/main.png" width="200" alt="Main Todo List">
+</td>
+<td>
 <img src="todo-frontend/assets/screenshots/main-dark.png" width="200" alt="Main Todo List-dark">
+</td>
+</tr>
+</table>
 
 *메인 화면: 할 일 목록을 확인하고 관리할 수 있습니다.*
 
