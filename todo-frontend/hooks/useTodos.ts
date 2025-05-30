@@ -13,6 +13,8 @@ import { Todo } from "../types"; //
 import axios from "axios";
 import { API_URL } from "@env";
 
+console.log("API_URL at runtime:", API_URL)
+
 const fetchTodos = async () => {
   const response = await axios.get(API_URL);
   return response.data;

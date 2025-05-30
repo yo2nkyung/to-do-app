@@ -12,7 +12,10 @@
       "distribution": "internal"
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "env": {
+        "API_URL": "https://to-do-app2025-da306b18cca9.herokuapp.com/todos"
+      }
     }
   },
   "submit": {
