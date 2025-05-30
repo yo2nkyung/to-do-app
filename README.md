@@ -1,6 +1,35 @@
 # Todo Application
 
-A full-stack Todo application built with React Native (Expo) for the frontend and Node.js/Express for the backend.
+A full-stack Todo application built with React Native (Expo) for the frontend and Node.js/Express (Prisma) for the backend.
+
+## Demo
+
+- Backend API: [https://to-do-app2025-da306b18cca9.herokuapp.com/todos](https://to-do-app2025-da306b18cca9.herokuapp.com/todos)
+
+## Environment Variables
+
+Example `.env` file:
+```
+API_URL=https://to-do-app2025-da306b18cca9.herokuapp.com/todos
+```
+
+## Deployment & Troubleshooting
+
+- The backend is deployed on Heroku.
+- The frontend is built with Expo and tested on TestFlight (or Play Store).
+- If network requests fail on iOS/Android, check .env, build cache, Info.plist, CORS, HTTPS, and other related settings.
+- Used console.log to verify that API_URL is correctly set at runtime on real devices.
+- Verified the `/todos` endpoint on the Heroku server directly via browser/Safari.
+
+## Experienced errors:
+
+- **1. Cannot GET /**  
+  A: The API server only provides the /todos endpoint. Accessing / will return 404 or "Cannot GET /"—this is expected.
+- **2. Network requests from the app are not working**  
+  A: Checked .env's API_URL, build cache, network environment, Info.plist, and CORS settings. eas.
+  
+- **3. API requests work in the simulator but not on a real device**  
+  A: Double-check the .env at build time, app cache/install issues, network permissions, Info.plist settings, and ensure you are using an HTTPS address. Added API_URL directly to the eas.json file to force the build environment variable.
 
 ## Features
 
@@ -27,12 +56,12 @@ A full-stack Todo application built with React Native (Expo) for the frontend an
 </tr>
 </table>
 
-*메인 화면: 할 일 목록을 확인하고 관리할 수 있습니다.*
+*Main screen: You can view and manage your to-do list.*
 
-### Database Management (Prisma Studio)
+### Database Management (Prisma Studio)_before deployment
 <img src="todo-backend/assets/screenshots/prisma-studio.png" width="300" alt="Prisma Studio">
 
-*Prisma Studio를 통한 데이터베이스 관리 화면*
+*Prisma Studio for database management*
 
 ## Prerequisites
 
